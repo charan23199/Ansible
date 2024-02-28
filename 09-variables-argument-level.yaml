@@ -1,0 +1,7 @@
+- name: CMD level variable
+  hosts: local
+  become: yes
+  tasks: 
+  - name: check variables
+    ansible.builtin.debug:
+      msg: "I am learning {{Course}}, Trainer is {{Trainer}}" 

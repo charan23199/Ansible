@@ -1,0 +1,10 @@
+- name: multiplay
+  hosts: local
+  become: yes
+  tasks:
+  - name: play1 and tast1
+    ansible.builtin.debug:
+      msg: "Hello from play1 and task1"
+  - name: play2 and task2
+    ansible.builtin.debug:
+      msg: "msg from play2 and task2"

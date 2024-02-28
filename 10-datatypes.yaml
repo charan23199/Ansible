@@ -1,0 +1,30 @@
+- name: checking data types
+  hosts: local
+  become: yes
+  vars:
+    NAME: "Sai Charan"
+    SKILLS:
+    - DevOps
+    - Shell
+    - Ansible 
+    EXPERIENCE:
+      DevOps: 7
+      AWS: 4
+      Docker: 3
+    TRAINER: true
+  tasks: 
+  - name: print key value 
+    ansible.builtin.debug:
+      msg: "name : {{NAME}}"
+
+  - name: print list 
+    ansible.builtin.debug:
+      msg: "Skills : {{SKILLS}}"
+
+  - name: print map
+    ansible.builtin.debug:
+      msg: "Experience : {{EXPERIENCE}}"
+
+  - name: print boolean 
+    ansible.builtin.debug:
+      msg: "Is there trainer: {{TRAINER}}"
